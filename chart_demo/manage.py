@@ -3,6 +3,9 @@
 import os
 import sys
 
+# update mysql.user set authentication_string = password('mysqlroot') where user ='root' and Host ='localhost';
+# grant all privileges on *.* to root@"%" identified by "mysqlroot" with grant option;
+
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chart_demo.settings')
