@@ -36,10 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "dbdata.apps.DbdataConfig",
-
     'importdata',
-
-    "rest_framework"]
+    "rest_framework",
+    "corsheaders"
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'chart_demo.urls'
@@ -131,3 +132,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static_files")
 ]
+# CORS_ORIGIN_WHITELIST = (
+#     '*',
+# )
+CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
+
+CORS_ORIGIN_ALLOW_ALL = True
