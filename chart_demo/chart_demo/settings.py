@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "dbdata.apps.DbdataConfig",
 
-    'importdata'
-]
+    'importdata',
+
+    "rest_framework"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
